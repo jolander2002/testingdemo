@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@1.5.1/dist/flowbite.min.css" rel="stylesheet">
+    <title>Functional Tournament Bracket with Scores</title>
+    <style>
+        body {
+            background-color: #f9fafb; /* Light background */
+        }
+        .bracket {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            margin: 0 auto;
+            max-width: 1200px; /* Limit width for better alignment */
+        }
+        .match {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+            position: relative;
+        }
+        .match::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            width: 2px;
+            height: 20px;
+            background-color: #374151; /* Line color */
+            z-index: -1;
+        }
+        .match-card {
+            width: 150px; /* Set width of match cards */
+            padding: 1rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+        }
+        .match-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+        .winner-card {
+            background-color: #6ee7b7; /* Light green */
+        }
+        .champion-card {
+            background-color: #4ade80; /* Darker green */
+        }
+        .disabled {
+            pointer-events: none;
+            opacity: 0.5;
+        }
+        .score-input {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <section class="py-8">
+        <h1 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-6">Tournament Bracket</h1>
+        <div class="bracket">
+            <!-- Round 1 -->
+            <div class="match" data-match="1">
+                <div class="match-card bg-white dark:bg-gray-800 rounded-lg shadow-md" data-team="Team A">
+                    <h2 class="text-lg font-semibold text-gray-900 dark:text-white">Team A</h2>
+                    <input type="number" class="score-input" placeholder="Score" min="0">
+                </div>
+                <div class="match-card bg-white dark:bg-gray-800 rounded-lg shadow-md" data-team="Team B">
+                    <h2 class="text-lg font-semibold text-gray-900 dark:text-white">Team B</h2>
+                    <input type="number" class="score-input" placeholder="Score" min="0">
+                </div>
+            </div>
+            <div class="match" data-match="2">
+                <div class="match-card bg-white dark:bg-gray-800 rounded-lg shadow-md" data-team="Team C">
+                    <h2 class="text-lg font-semibold text-gray-900 dark:text-white">Team C</h2>
+                    <input type="number" class="score-input" placeholder="Score" min="0">
+                </div>
+                <div class="match-card bg-white dark:bg-gray-800 rounded-lg shadow-md" data-team="Team D">
+                    <h2 class="text-lg font-semibold text-gray-900 dark:text-white">Team D</h2>
+                    <input type="number" class="score-input" placeholder="Score" min="0">
+                </div>
+            </div>
+            <!-- Round 2 -->
+            <div class="match" data-match="3">
+                <div class="match-card winner-card rounded-lg shadow-md" data-team="Winner 1">
+                    <h2 class="text-lg font-semibold text-gray-900 dark:text-white">Winner of A vs B</h2>
+                    <input type="number" class="score-input" placeholder="Score" min="0">
+                </div>
+                <div class="match-card winner-card rounded-lg shadow-md" data-team="Winner 2">
+                    <h2 class="text-lg font-semibold text-gray-900 dark:text-white">Winner of C vs D</h2>
+                    <input type="number" class="score-input" placeholder="Score" min="0">
+                </div>
+            </div>
+            <!-- Final -->
+            <div class="match" data-match="4">
+                <div class="match-card champion-card rounded-lg shadow-md" data-team="Champion">
+                    <h2 class="text-lg font-semibold text-gray-900 dark:text-white">Champion</h2>
+                    <input type="number" class="score-input" placeholder="Score" min="0">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@1.5.1/dist/flowbite.bundle.min.js"></script>
+    <script>
+        const matches = document.querySelectorAll('.match');
+
+        matches.forEach(match => {
+            const matchCards = match.querySelectorAll('.match-card');
+            matchCards.forEach(card => {
+                card.addEventListener('click', () => {
+                    const matchNumber = match.dataset.match;
+
+                    // Disable all cards in this match
+                    matchCards.forEach(mc => {
+                        mc.classList.add('disabled');
+                    });
+
+                    // Highlight selected winner
+                    card.classList.add('winner-card');
+
+                    // Determine winners for the next round
+                    if (matchNumber == 1) {
+                        document.querySelector(`.match[data-match="3"] .match-card:nth-child(1)`).innerText = card.dataset.team;
+                    } else if (matchNumber == 2) {
+                        document.querySelector(`.match[data-match="3"] .match-card:nth-child(2)`).innerText = card.dataset.team;
+                    } else if (matchNumber == 3) {
+                        const finalWinner = card.dataset.team;
+                        document.querySelector(`.match[data-match="4"] .match-card`).innerText = finalWinner;
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

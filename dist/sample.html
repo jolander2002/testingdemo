@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet">
+    
+    <title>Palakasan</title>
+</head>
+
+<body>
+
+<nav class="bg-white border-gray-200 dark:bg-gray-900 shadow-md">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <a href="#" class="flex items-center">
+            <img src="../img/msun.png" class="w-12 h-12 rounded-full mr-2" alt="Logo">
+            <img src="../img/logo.jpg" class="w-12 h-12 rounded-full mr-2" alt="Logo">
+            <span class="text-2xl font-bold dark:text-white">Palakasan 2024: The Grand Magic Games</span>
+        </a>
+
+        <button data-collapse-toggle="navbar" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false" onclick="toggleMenu()">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+            </svg>
+        </button>
+
+        <div class="hidden w-full md:block md:w-auto" id="navbar">
+            <ul class="flex flex-col md:flex-row md:space-x-8">
+                <li class="relative">
+                    <button id="dropdownButton" data-dropdown-toggle="dropdown" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 dark:text-white font-semibold">Home</button>
+                    <div id="dropdown" class="hidden z-10 w-44 bg-white shadow-md rounded-md dark:bg-gray-700">
+                        <ul class="py-1 text-gray-700 dark:text-gray-200">
+                            <li class="relative">
+                                <button id="palakasanDropdownButton" data-dropdown-toggle="dropdownPalakasan" class="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 flex justify-between items-center">
+                                    <span>Palakasan</span> <!-- Keep "Palakasan" here -->
+                                    <span>&gt;</span> <!-- Right arrow indicator -->
+                                </button>
+                                <div id="dropdownPalakasan" class="hidden z-20 w-44 bg-white shadow-md rounded-md dark:bg-gray-700 absolute left-full top-0">
+                                    <ul class="py-1 text-gray-700 dark:text-gray-200">
+                                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600">2024</a></li>
+                                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600">2025</a></li>
+                                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600">2026</a></li>
+                                    </ul>
+                                </div>
+                            </li>                            
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="relative">
+                    <button id="dropdownButtonSports" data-dropdown-toggle="dropdownSports" class="block py-2 px-3 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 font-semibold">Sports</button>
+                    <div id="dropdownSports" class="hidden z-10 w-44 bg-white shadow-md rounded-md dark:bg-gray-700">
+                        <ul class="py-1 text-gray-700 dark:text-gray-200">
+                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600">Soccer</a></li>
+                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600">Basketball</a></li>
+                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600">Volleyball</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li><a href="#" class="block py-2 px-3 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 font-semibold">Schedule</a></li>
+                <li><a href="#" class="block py-2 px-3 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 font-semibold">Ranking</a></li>
+
+                <li class="relative">
+                    <button id="dropdownButtonCollege" data-dropdown-toggle="dropdownCollege" class="block py-2 px-3 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 font-semibold">College</button>
+                    <div id="dropdownCollege" class="hidden z-10 w-44 bg-white shadow-md rounded-md dark:bg-gray-700">
+                        <ul class="py-1 text-gray-700 dark:text-gray-200">
+                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600">CMAS</a></li>
+                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600">CBAA</a></li>
+                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600">CAFES</a></li>
+                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600">SMFT</a></li>
+                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600">CESS-IDS</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="bg-gray-50 dark:bg-gray-900">
+        <div class="grid lg:grid-cols-2 gap-8 max-w-screen-xl mx-auto py-4 px-4">
+            <img src="../img/torches.png" class="object-cover h-30 rounded-md" alt="Description"/>
+            <div class="p-8 bg-white dark:bg-gray-800 rounded-lg shadow-xl">
+                <h1 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">Log in to your account:</h1>
+                <h3 class="text-sm font-medium text-gray-600">Welcome back! Please enter your account details.</h3>
+                
+                <form action = "(2)homepage.html" class="mt-3 space-y-4">
+                    <label for="account" class=" text-sm font-medium text-gray-900 dark:text-white">Select account type:</label>
+                    <select id="account" class="bg-gray-50 border-gray-300 text-sm text-gray-900 rounded-lg p-2.5 w-full dark:bg-gray-700 dark:text-white" required>
+                        <option disabled selected style="color: #6b7280;">Select account type</option> <!-- gray-500 -->
+                        <option value="SSCsportscom" class="text-gray-900">SSC Sports Committee Head</option>
+                        <option value="facilitator" class="text-gray-900">Facilitator</option>
+                        <option value="COLsportscom" class="text-gray-900">College Sports Committee Head</option>
+                    </select>
+
+                    <label for="email" class="block text-sm font-medium text-gray-900 dark:text-white">Email</label>
+                    <input type="email" id="email" class="w-full p-2.5 bg-gray-50 border-gray-300 text-sm rounded-lg dark:bg-gray-700 dark:text-white" placeholder="firstname.lastname@msunaawan.edu.ph" required/>
+
+                    <label for="password" class="block text-sm font-medium text-gray-900 dark:text-white">Password</label>
+                    <input type="password" id="password" class="w-full p-2.5 bg-gray-50 border-gray-300 text-sm rounded-lg dark:bg-gray-700 dark:text-white" placeholder="••••••••••" required/>
+
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center">
+                            <input type="checkbox" id="remember" class="w-4 h-4 border-gray-300 rounded bg-gray-50 dark:bg-gray-700" required />
+                            <label for="remember" class="text-sm font-medium text-gray-500 dark:text-gray-400 ml-2">Remember this device</label>
+                        </div>
+                        <a href="#" class="text-sm text-blue-600 hover:underline dark:text-blue-500 font-semibold">Forgot Password?</a>
+                    </div>                    
+
+                    <button type="submit" class="w-full py-3 bg-blue-700 text-white rounded-lg hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700">Sign in</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet">
+    <title>Palakasan</title>
+</head>
+
+<body>
+
+    <nav class="bg-white border-gray-200 dark:bg-gray-900 shadow-2xl">
+        <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
+            <a href="#" class="flex items-center">
+                <img src="../img/msun.png" class="w-12 h-12 rounded-full mr-2" alt="Logo">
+                <img src="../img/logo.jpg" class="w-12 h-12 rounded-full mr-2" alt="Logo">
+                <span class="text-lg font-bold dark:text-white">Palakasan 2024: The Grand Magic Games</span>
+            </a>
+            <div class="flex items-center space-x-6 rtl:space-x-reverse">
+                <a href="tel:5541251234" class="text-sm text-gray-500 dark:text-white hover:underline">(+639)777-88-6642</a>
+                <a href="(1)login.html" class="text-sm text-blue-600 dark:text-blue-500 hover:underline">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="border-gray-200 bg-gray-100 shadow-md">
+        <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
+            <button data-collapse-toggle="navbar" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false" onclick="toggleMenu()">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
+                </svg>
+            </button>
+
+            <div class="hidden w-full md:block md:w-auto" id="navbar">
+                <ul class="flex flex-col md:flex-row md:space-x-8">
+                    <li class="relative">
+                        <button id="dropdownButton" data-dropdown-toggle="dropdown" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 dark:text-white font-semibold">Home</button>
+                        <div id="dropdown" class="hidden z-10 w-44 bg-white shadow-md rounded-md dark:bg-gray-700">
+                            <ul class="py-1 text-gray-700 dark:text-gray-200">
+                                <li class="relative">
+                                    <button id="palakasanDropdownButton" data-dropdown-toggle="dropdownPalakasan" class="w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 flex justify-between items-center">
+                                        <span>Palakasan</span>
+                                        <span>&gt;</span>
+                                    </button>
+                                    <div id="dropdownPalakasan" class="hidden z-20 w-44 bg-white shadow-md rounded-md dark:bg-gray-700 absolute left-full top-0">
+                                        <ul class="py-1 text-gray-700 dark:text-gray-200">
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600">2024</a></li>
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600">2025</a></li>
+                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600">2026</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="relative">
+                        <button id="dropdownButtonSports" data-dropdown-toggle="dropdownSports" class="block py-2 px-3 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 font-semibold">Sports</button>
+                        <div id="dropdownSports" class="hidden z-10 w-44 bg-white shadow-md rounded-md dark:bg-gray-700">
+                            <ul class="py-1 text-gray-700 dark:text-gray-200">
+                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600">Soccer</a></li>
+                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600">Basketball</a></li>
+                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600">Volleyball</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li><a href="#" class="block py-2 px-3 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 font-semibold">Schedule</a></li>
+                    <li><a href="#" class="block py-2 px-3 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 font-semibold">Ranking</a></li>
+
+                    <li class="relative">
+                        <button id="dropdownButtonCollege" data-dropdown-toggle="dropdownCollege" class="block py-2 px-3 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 font-semibold">College</button>
+                        <div id="dropdownCollege" class="hidden z-10 w-44 bg-white shadow-md rounded-md dark:bg-gray-700">
+                            <ul class="py-1 text-gray-700 dark:text-gray-200">
+                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600">CMAS</a></li>
+                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600">CBAA</a></li>
+                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600">CAFES</a></li>
+                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600">SMFT</a></li>
+                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600">CESS-IDS</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Search input with search icon (made wider using w-96) -->
+            <div class="relative mt-4 md:mt-0">
+                <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+                <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                    <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l6-6m0 0a6 6 0 1 0-6-6 6 6 0 0 0 6 6z" />
+                    </svg>
+                </div>
+                <input type="search" id="default-search" class="block w-96 pl-10 p-4 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search..." required />
+                <button type="submit" class="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
+            </div>
+        </div>
+    </nav>
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+
+</body>
+</html>

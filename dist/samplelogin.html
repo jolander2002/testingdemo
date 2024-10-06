@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href = "output.css">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet"/>
+    <title>Log-in</title>
+</head>
+<body>
+   
+    <section class="bg-gray-50 space-y-2 dark:bg-gray-900">
+        <div class = "flex items-center px-2 mx-auto max-w-screen-xl pt-4 pb-0">
+            <img src="../img/msun.png" alt="Logo" class="w-12 h-12 rounded-full mr-3" />
+            <img src="https://scontent.fmnl9-3.fna.fbcdn.net/v/t39.30808-6/380844234_723176123159755_6536828408183515841_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeECrdDGmXFx1LP6aNJFyhCaHsysfrZUeEgezKx-tlR4SImvL6DvfKAMl_qtBHgj5lRzUxqP6KCrGQfG7mU6mTgP&_nc_ohc=u-uST73jsKsQ7kNvgHoAxFO&_nc_zt=23&_nc_ht=scontent.fmnl9-3.fna&oh=00_AYCAK1iByVWYF0dkSnAtlt2587CdKTUMIeaR5LbpXXrQ0A&oe=67006199" alt="Logo" class="w-12 h-12 rounded-full mr-3" />
+            <h1 class = "text-2xl mb-1 font-bold">MSUN Supreme Student Council</h1>
+        </div>  
+            <div class="py-2 px-2 mx-auto max-w-screen-xl grid lg:grid-cols-2 gap-8 rounded-md">
+                <img src="../img/torches.png" alt="Description" class="object-cover h-30 rounded-md" />
+                <div>
+                    <div class="w-full lg:max-w-xl p-12 space-y-3 sm:p-8 bg-white rounded-lg  dark:bg-gray-800 shadow-xl">
+                        <h1 class="text-2xl font-bold text-gray-900 dark:text-white">
+                            Log in to your account:
+                        </h1>
+                        <div class = "py-0 px-0 max-w-screen-sm">
+                            <h3 class = "text-sm font-medium text-gray-600">
+                                Welcome back! Please enter your account details.
+                            </h3>
+                        </div>
+                        
+                        <form class="mt-8 space-y-2" action="#">
+                            <label for="account" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select account type: </label>
+                            <select id="account" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+                            <option value="" disabled selected>Select account type</option>
+                            <option value="SSCsportscom">SSC Sports Committee Head</option>
+                            <option value="facilitator">Facilitator</option>
+                            <option value="COLsportscom">College Sports Committee Head</option>
+                            
+                            </select>
+                        </form>
+                            
+                        <form class="mt-8 space-y-6" action="#">
+                            <div>
+                                <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email</label>
+                                <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="firstname.lastname@msunaawan.edu.ph" required />
+                            </div>
+                            <div>
+                                <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
+                                <input type="password" name="password" id="password" placeholder="••••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex items-center h-5">
+                                    <input id="remember" aria-describedby="remember" name="remember" type="checkbox" class="w-4 h-4 border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:bg-gray-700 dark:border-gray-600" required />
+                                </div>
+                                <div class="ms-3 text-sm">
+                                <label for="remember" class="font-medium text-gray-500 dark:text-gray-400">Remember this device</label>
+                                </div>
+                                <a href="#" class="ms-auto text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">Forgot Password?</a>
+                            </div>
+                            <button type="submit" class="justify-center px-8 py-3 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 sm:w-auto dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Sign in</button>
+                        
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+    </body>
+    </html>

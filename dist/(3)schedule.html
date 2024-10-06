@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet">
+    <title>Schedule</title>
+</head>
+<body>
+    <nav class="bg-white border-gray-200 dark:bg-gray-900 shadow-2xl">
+        <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
+            <a href="#" class="flex items-center">
+                <img src="../img/msun.png" class="w-12 h-12 rounded-full mr-3" alt="Logo">
+                <img src="../img/logo.jpg" class="w-12 h-12 rounded-full mr-3" alt="Logo">
+                <span class="text-2xl    font-bold dark:text-white">Palakasan 2024: The Grand Magic Games</span>
+            </a>
+            <div class="flex items-center space-x-6 rtl:space-x-reverse">
+                <a href="tel:5541251234" class="text-sm text-gray-500 dark:text-white hover:underline">(+639)777-88-6642</a>
+                <a href="(1)login.html" class="text-sm text-blue-600 dark:text-blue-500 hover:underline">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="border-gray-200 bg-gray-100 shadow-md">
+        <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-0">
+            <button data-collapse-toggle="navbar" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false" onclick="toggleMenu()">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
+                </svg>
+            </button>
+
+            <div class="hidden w-full md:block md:w-auto" id="navbar">
+                <ul class="flex flex-col md:flex-row md:space-x-8 pl-5 m-2">
+                    <li class="relative">
+                        <li><a href="(2)homepage.html" class="block py-2 px-3 text-black dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 font-semibold">Home</a></li>
+
+                    <li><a href="(3)schedule.html" class="block py-2 px-3 text-blue-700 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 font-semibold">Schedule</a></li>
+                    <li><a href="(4)ranking.html" class="block py-2 px-3 text-black dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 font-semibold">Ranking</a></li>
+
+                    <li class="relative">
+                        <button id="dropdownButtonCollege" data-dropdown-toggle="dropdownCollege" class="block py-2 px-3 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 font-semibold">Teams</button>
+                        <div id="dropdownCollege" class="hidden z-10 w-44 bg-white shadow-md rounded-md dark:bg-gray-700">
+                            <ul class="py-1 text-gray-700 dark:text-gray-200">
+                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600">CMAS</a></li>
+                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600">CBAA</a></li>
+                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600">CAFES</a></li>
+                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600">SMFT</a></li>
+                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600">CESS-IDS</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li><a href="#" class="block py-2 px-3 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 font-semibold">History</a></li>
+                </ul>
+            </div>
+
+            <!-- Search input with search icon (made wider using w-96) -->
+            <div class="relative m-1 p-1">
+                <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+                <div class="absolute inset-y-0 left-0 flex items-center p-2 pl-3 pointer-events-none">
+                    <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l6-6m0 0a6 6 0 1 0-6-6 6 6 0 0 0 6 6z" />
+                    </svg>
+                </div>
+                <input type="search" id="default-search" class="block w-96 pl-10 p-3 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search..." required />
+                <button type="submit" class="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="text-center mb-4 mt-4 p-2 ">
+        <h2 class="text-4xl font-bold">Sports Schedules</h2>
+        <p class="text-gray-500">Check out the schedules in the palakasan competition.</p>
+    </div>
+    <!-- Flex container for cards -->
+    <div class="container mx-auto px-4 pt-1"></div>
+        <div class="text-3xl font-bold text-black p-2 m-0 text-center">
+            <h2>Basketball</h2>
+        </div>
+
+        <!-- Flex container for cards -->
+        <div class="flex flex-wrap justify-center space-x-1 px-3 mx-3">
+    
+            <!-- Card 1 -->
+            <div class="max-w-xs w-full md:w-1/3 lg:w-1/5 px-4 mb-8">
+                <div class="bg-white border border-gray-200 rounded-lg shadow-md p-4">
+                    <!-- Game Info -->
+                    <div class="mb-4">
+                        <span class="block text-xl font-bold text-gray-900">Game 1 - Round 1</span>
+                    </div>
+    
+                    <!-- Date and Time Section -->
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-base font-semibold text-gray-900">October 12, 2024</span>
+                        <span class="text-sm text-gray-500">2:00 PM</span>
+                    </div>
+    
+                    <!-- Teams and Scores Section -->
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="text-lg font-bold text-yellow-300">CBAA</div>
+                        <span class="text-gray-500">vs</span>
+                        <div class="text-lg font-bold text-blue-700">SMFT</div>
+                    </div>
+                    
+                    
+                    <div class="flex items-center justify-center mb-4 space-x-8">
+                        <div class="text-lg font-bold text-yellow-300">--</div>
+                        <div class="text-lg font-bold text-blue-700">--</div>
+                    </div>
+    
+                    <!-- Venue and Category Section -->
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-md font-medium text-gray-700">Venue:</span>
+                        <span class="text-md text-gray-600">OVAL</span>
+                    </div>
+    
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-md font-medium text-gray-700">Category:</span>
+                        <span class="text-md text-gray-600">Women</span>
+                    </div>
+    
+                    <!-- Facilitator Section -->
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-md font-medium text-gray-700">Facilitator:</span>
+                        <span class="text-md text-gray-600">John Doe</span>
+                    </div>
+
+                    <!--Type Section -->
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-md font-medium text-gray-700">Type:</span>
+                        <span class="text-md text-gray-600">Double Elimination</span>
+                    </div>
+    
+                    <!-- Status Section -->
+                    <div class="mb-4 flex justify-center">
+                        <span class="inline-block px-3 py-1 text-sm font-medium rounded-full bg-orange-100 text-orange-800">
+                            Ongoing
+                        </span>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Card 2 -->
+            <div class="max-w-xs w-full md:w-1/3 lg:w-1/5 px-4 mb-8">
+                <div class="bg-white border border-gray-200 rounded-lg shadow-md p-4">
+                    <div class="mb-4">
+                        <span class="block text-xl font-bold text-gray-900">Game 2 - Round 2</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-base font-semibold text-gray-900">October 14, 2024</span>
+                        <span class="text-sm text-gray-500">3:00 PM</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="text-lg font-bold text-black">G1 Loser</div>
+                        <span class="text-gray-500">vs</span>
+                        <div class="text-lg font-bold text-pink-400">CESS-IDS</div>
+                    </div>
+                    <div class="flex items-center justify-center mb-4 space-x-8">
+                        <div class="text-lg font-bold text-black">--</div>
+                        <div class="text-lg font-bold text-pink-400">--</div>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-md font-medium text-gray-700">Venue:</span>
+                        <span class="text-md text-gray-600">MESC</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-md font-medium text-gray-700">Category:</span>
+                        <span class="text-md text-gray-600">Men</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-md font-medium text-gray-700">Facilitator:</span>
+                        <span class="text-md text-gray-600">Jane Smith</span>
+                    </div>
+                    <!--Type Section -->
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-md font-medium text-gray-700">Type:</span>
+                        <span class="text-md text-gray-600">Double Elimination</span>
+                    </div>
+    
+                    <div class="mb-4 flex justify-center">
+                        <span class="inline-block px-3 py-1 text-sm font-medium rounded-full bg-gray-100 text-gray-800">
+                            Not started
+                        </span>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Card 3 -->
+            <div class="max-w-xs w-full md:w-1/3 lg:w-1/5 px-4 mb-8">
+                <div class="bg-white border border-gray-200 rounded-lg shadow-md p-4">
+                    <div class="mb-4">
+                        <span class="block text-xl font-bold text-gray-900">Game 3 - Semifinals</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-base font-semibold text-gray-900">October 14, 2024</span>
+                        <span class="text-sm text-gray-500">3:00 PM</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="text-lg font-bold text-black">G2 Winner</div>
+                        <span class="text-gray-500">vs</span>
+                        <div class="text-lg font-bold text-green-400">CAFES</div>
+                    </div>
+                    <div class="flex items-center justify-center mb-4 space-x-8">
+                        <div class="text-lg font-bold text-black">--</div>
+                        <div class="text-lg font-bold text-pink-400">--</div>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-md font-medium text-gray-700">Venue:</span>
+                        <span class="text-md text-gray-600">MESC</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-md font-medium text-gray-700">Category:</span>
+                        <span class="text-md text-gray-600">Men</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-md font-medium text-gray-700">Facilitator:</span>
+                        <span class="text-md text-gray-600">Jane Smith</span>
+                    </div>
+                    <!--Type Section -->
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-md font-medium text-gray-700">Type:</span>
+                        <span class="text-md text-gray-600">Double Elimination</span>
+                    </div>
+    
+                    <div class="mb-4 flex justify-center">
+                        <span class="inline-block px-3 py-1 text-sm font-medium rounded-full bg-gray-100 text-gray-800">
+                            Not started
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="max-w-xs w-full md:w-1/3 lg:w-1/5 px-4 mb-8">
+                <div class="bg-white border border-gray-200 rounded-lg shadow-md p-4">
+                    <div class="mb-4">
+                        <span class="block text-xl font-bold text-gray-900">Game 4 - Championship</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-base font-semibold text-gray-900">October 14, 2024</span>
+                        <span class="text-sm text-gray-500">3:00 PM</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="text-lg font-bold text-black">G3 Winner</div>
+                        <span class="text-gray-500">vs</span>
+                        <div class="text-lg font-bold text-green-400">CAFES</div>
+                    </div>
+                    <div class="flex items-center justify-center mb-4 space-x-8">
+                        <div class="text-lg font-bold text-black">--</div>
+                        <div class="text-lg font-bold text-pink-400">--</div>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-md font-medium text-gray-700">Venue:</span>
+                        <span class="text-md text-gray-600">MESC</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-md font-medium text-gray-700">Category:</span>
+                        <span class="text-md text-gray-600">Men</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-md font-medium text-gray-700">Facilitator:</span>
+                        <span class="text-md text-gray-600">Jane Smith</span>
+                    </div>
+                    <!--Type Section -->
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-md font-medium text-gray-700">Type:</span>
+                        <span class="text-md text-gray-600">Double Elimination</span>
+                    </div>
+    
+                    <div class="mb-4 flex justify-center">
+                        <span class="inline-block px-3 py-1 text-sm font-medium rounded-full bg-gray-100 text-gray-800">
+                            Not started
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <div class="container mx-auto px-4 py-2"></div>
+        <div class="text-3xl font-bold text-black p-2 m-0 text-center">
+            <h2>Volleyball</h2>
+        </div>
+
+        <!-- Flex container for cards -->
+        <div class="flex flex-wrap justify-center space-x-1 px-3 mx-3 ">
+    
+            <!-- Card 1 -->
+            <div class="max-w-xs w-full md:w-1/3 lg:w-1/5 px-4 mb-8">
+                <div class="bg-white border border-gray-200 rounded-lg shadow-md p-4">
+                    <!-- Game Info -->
+                    <div class="mb-4">
+                        <span class="block text-xl font-bold text-gray-900">Game 1 - Round 1</span>
+                    </div>
+    
+                    <!-- Date and Time Section -->
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-base font-semibold text-gray-900">October 12, 2024</span>
+                        <span class="text-sm text-gray-500">2:00 PM</span>
+                    </div>
+    
+                    <!-- Teams and Scores Section -->
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="text-lg font-bold text-yellow-300">CBAA</div>
+                        <span class="text-gray-500">vs</span>
+                        <div class="text-lg font-bold text-blue-700">SMFT</div>
+                    </div>
+                    
+                    
+                    <div class="flex items-center justify-center mb-4 space-x-8">
+                        <div class="text-lg font-bold text-yellow-300">--</div>
+                        <div class="text-lg font-bold text-blue-700">--</div>
+                    </div>
+    
+                    <!-- Venue and Category Section -->
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-md font-medium text-gray-700">Venue:</span>
+                        <span class="text-md text-gray-600">OVAL</span>
+                    </div>
+    
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-md font-medium text-gray-700">Category:</span>
+                        <span class="text-md text-gray-600">Women</span>
+                    </div>
+    
+                    <!-- Facilitator Section -->
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-md font-medium text-gray-700">Facilitator:</span>
+                        <span class="text-md text-gray-600">John Doe</span>
+                    </div>
+
+                     <!--Type Section -->
+                    <div class="flex items-center justify-between mb-4">
+                       <span class="text-md font-medium text-gray-700">Type:</span>
+                        <span class="text-md text-gray-600">Double Elimination</span>
+                    </div>
+        
+    
+                    <!-- Status Section -->
+                    <div class="mb-4 flex justify-center">
+                        <span class="inline-block px-3 py-1 text-sm font-medium rounded-full bg-orange-100 text-orange-800">
+                            Ongoing
+                        </span>
+                    </div>
+
+               
+                </div>
+            </div>
+    
+            <!-- Card 2 -->
+            <div class="max-w-xs w-full md:w-1/3 lg:w-1/5 px-4 mb-8">
+                <div class="bg-white border border-gray-200 rounded-lg shadow-md p-4">
+                    <div class="mb-4">
+                        <span class="block text-xl font-bold text-gray-900">Game 2 - Round 2</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-base font-semibold text-gray-900">October 14, 2024</span>
+                        <span class="text-sm text-gray-500">3:00 PM</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="text-lg font-bold text-black">G1 Loser</div>
+                        <span class="text-gray-500">vs</span>
+                        <div class="text-lg font-bold text-pink-400">CESS-IDS</div>
+                    </div>
+                    <div class="flex items-center justify-center mb-4 space-x-8">
+                        <div class="text-lg font-bold text-black">--</div>
+                        <div class="text-lg font-bold text-pink-400">--</div>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-md font-medium text-gray-700">Venue:</span>
+                        <span class="text-md text-gray-600">MESC</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-md font-medium text-gray-700">Category:</span>
+                        <span class="text-md text-gray-600">Men</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-md font-medium text-gray-700">Facilitator:</span>
+                        <span class="text-md text-gray-600">Jane Smith</span>
+                    </div>
+
+                    <!--Type Section -->
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-md font-medium text-gray-700">Type:</span>
+                        <span class="text-md text-gray-600">Double Elimination</span>
+                    </div>
+    
+
+                    <div class="mb-4 flex justify-center">
+                        <span class="inline-block px-3 py-1 text-sm font-medium rounded-full bg-gray-100 text-gray-800">
+                            Not started
+                        </span>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Card 3 -->
+            <div class="max-w-xs w-full md:w-1/3 lg:w-1/5 px-4 mb-8">
+                <div class="bg-white border border-gray-200 rounded-lg shadow-md p-4">
+                    <div class="mb-4">
+                        <span class="block text-xl font-bold text-gray-900">Game 3 - Semifinals</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-base font-semibold text-gray-900">October 14, 2024</span>
+                        <span class="text-sm text-gray-500">3:00 PM</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="text-lg font-bold text-black">G2 Winner</div>
+                        <span class="text-gray-500">vs</span>
+                        <div class="text-lg font-bold text-green-400">CAFES</div>
+                    </div>
+                    <div class="flex items-center justify-center mb-4 space-x-8">
+                        <div class="text-lg font-bold text-black">--</div>
+                        <div class="text-lg font-bold text-pink-400">--</div>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-md font-medium text-gray-700">Venue:</span>
+                        <span class="text-md text-gray-600">MESC</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-md font-medium text-gray-700">Category:</span>
+                        <span class="text-md text-gray-600">Men</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-md font-medium text-gray-700">Facilitator:</span>
+                        <span class="text-md text-gray-600">Jane Smith</span>
+                    </div>
+                    <!--Type Section -->
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-md font-medium text-gray-700">Type:</span>
+                        <span class="text-md text-gray-600">Double Elimination</span>
+                    </div>
+    
+                    <div class="mb-4 flex justify-center">
+                        <span class="inline-block px-3 py-1 text-sm font-medium rounded-full bg-gray-100 text-gray-800">
+                            Not started
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="max-w-xs w-full md:w-1/3 lg:w-1/5 px-4 mb-8">
+                <div class="bg-white border border-gray-200 rounded-lg shadow-md p-4">
+                    <div class="mb-4">
+                        <span class="block text-xl font-bold text-gray-900">Game 4 - Championship</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-base font-semibold text-gray-900">October 14, 2024</span>
+                        <span class="text-sm text-gray-500">3:00 PM</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="text-lg font-bold text-black">G3 Winner</div>
+                        <span class="text-gray-500">vs</span>
+                        <div class="text-lg font-bold text-green-400">CAFES</div>
+                    </div>
+                    <div class="flex items-center justify-center mb-4 space-x-8">
+                        <div class="text-lg font-bold text-black">--</div>
+                        <div class="text-lg font-bold text-pink-400">--</div>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-md font-medium text-gray-700">Venue:</span>
+                        <span class="text-md text-gray-600">MESC</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-md font-medium text-gray-700">Category:</span>
+                        <span class="text-md text-gray-600">Men</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-md font-medium text-gray-700">Facilitator:</span>
+                        <span class="text-md text-gray-600">Jane Smith</span>
+                    </div>
+                    <!--Type Section -->
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-md font-medium text-gray-700">Type:</span>
+                        <span class="text-md text-gray-600">Double Elimination</span>
+                    </div>
+    
+                    <div class="mb-4 flex justify-center">
+                        <span class="inline-block px-3 py-1 text-sm font-medium rounded-full bg-gray-100 text-gray-800">
+                            Not started
+                        </span>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="container mx-auto px-4 py-2"></div>
+        <div class="text-3xl font-bold text-black p-2 m-0 text-center">
+            <h2>Soccer</h2>
+        </div>
+
+        <!-- Flex container for cards -->
+        <div class="flex flex-wrap justify-center space-x-1 px-3 mx-3">
+    
+            <!-- Card 1 -->
+            <div class="max-w-xs w-full md:w-1/3 lg:w-1/5 px-4 mb-8">
+                <div class="bg-white border border-gray-200 rounded-lg shadow-md p-4">
+                    <!-- Game Info -->
+                    <div class="mb-4">
+                        <span class="block text-xl font-bold text-gray-900">Game 1 - Round 1</span>
+                    </div>
+    
+                    <!-- Date and Time Section -->
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-base font-semibold text-gray-900">October 12, 2024</span>
+                        <span class="text-sm text-gray-500">2:00 PM</span>
+                    </div>
+    
+                    <!-- Teams and Scores Section -->
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="text-lg font-bold text-yellow-300">CBAA</div>
+                        <span class="text-gray-500">vs</span>
+                        <div class="text-lg font-bold text-blue-700">SMFT</div>
+                    </div>
+                    
+                    
+                    <div class="flex items-center justify-center mb-4 space-x-8">
+                        <div class="text-lg font-bold text-yellow-300">--</div>
+                        <div class="text-lg font-bold text-blue-700">--</div>
+                    </div>
+    
+                    <!-- Venue and Category Section -->
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-md font-medium text-gray-700">Venue:</span>
+                        <span class="text-md text-gray-600">OVAL</span>
+                    </div>
+    
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-md font-medium text-gray-700">Category:</span>
+                        <span class="text-md text-gray-600">Women</span>
+                    </div>
+    
+                    <!-- Facilitator Section -->
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-md font-medium text-gray-700">Facilitator:</span>
+                        <span class="text-md text-gray-600">John Doe</span>
+                    </div>
+    
+                    <!-- Status Section -->
+                    <div class="mb-4 flex justify-center">
+                        <span class="inline-block px-3 py-1 text-sm font-medium rounded-full bg-orange-100 text-orange-800">
+                            Ongoing
+                        </span>
+                    </div>
+
+                    <!--Type Section -->
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-md font-medium text-gray-700">Type:</span>
+                        <span class="text-md text-gray-600">Double Elimination</span>
+                    </div>
+    
+                </div>
+            </div>
+    
+            <!-- Card 2 -->
+            <div class="max-w-xs w-full md:w-1/3 lg:w-1/5 px-4 mb-8">
+                <div class="bg-white border border-gray-200 rounded-lg shadow-md p-4">
+                    <div class="mb-4">
+                        <span class="block text-xl font-bold text-gray-900">Game 2 - Round 2</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-base font-semibold text-gray-900">October 14, 2024</span>
+                        <span class="text-sm text-gray-500">3:00 PM</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="text-lg font-bold text-black">G1 Loser</div>
+                        <span class="text-gray-500">vs</span>
+                        <div class="text-lg font-bold text-pink-400">CESS-IDS</div>
+                    </div>
+                    <div class="flex items-center justify-center mb-4 space-x-8">
+                        <div class="text-lg font-bold text-black">--</div>
+                        <div class="text-lg font-bold text-pink-400">--</div>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-md font-medium text-gray-700">Venue:</span>
+                        <span class="text-md text-gray-600">MESC</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-md font-medium text-gray-700">Category:</span>
+                        <span class="text-md text-gray-600">Men</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-md font-medium text-gray-700">Facilitator:</span>
+                        <span class="text-md text-gray-600">Jane Smith</span>
+                    </div>
+
+                    <!--Type Section -->
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-md font-medium text-gray-700">Type:</span>
+                        <span class="text-md text-gray-600">Double Elimination</span>
+                    </div>
+    
+                    <div class="mb-4 flex justify-center">
+                        <span class="inline-block px-3 py-1 text-sm font-medium rounded-full bg-gray-100 text-gray-800">
+                            Not started
+                        </span>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Card 3 -->
+            <div class="max-w-xs w-full md:w-1/3 lg:w-1/5 px-4 mb-8">
+                <div class="bg-white border border-gray-200 rounded-lg shadow-md p-4">
+                    <div class="mb-4">
+                        <span class="block text-xl font-bold text-gray-900">Game 3 - Semifinals</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-base font-semibold text-gray-900">October 14, 2024</span>
+                        <span class="text-sm text-gray-500">3:00 PM</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="text-lg font-bold text-black">G2 Winner</div>
+                        <span class="text-gray-500">vs</span>
+                        <div class="text-lg font-bold text-green-400">CAFES</div>
+                    </div>
+                    <div class="flex items-center justify-center mb-4 space-x-8">
+                        <div class="text-lg font-bold text-black">--</div>
+                        <div class="text-lg font-bold text-pink-400">--</div>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-md font-medium text-gray-700">Venue:</span>
+                        <span class="text-md text-gray-600">MESC</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-md font-medium text-gray-700">Category:</span>
+                        <span class="text-md text-gray-600">Men</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-md font-medium text-gray-700">Facilitator:</span>
+                        <span class="text-md text-gray-600">Jane Smith</span>
+                    </div>
+                    <!--Type Section -->
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-md font-medium text-gray-700">Type:</span>
+                        <span class="text-md text-gray-600">Double Elimination</span>
+                    </div>
+    
+                    <div class="mb-4 flex justify-center">
+                        <span class="inline-block px-3 py-1 text-sm font-medium rounded-full bg-gray-100 text-gray-800">
+                            Not started
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="max-w-xs w-full md:w-1/3 lg:w-1/5 px-4 mb-8">
+                <div class="bg-white border border-gray-200 rounded-lg shadow-md p-4">
+                    <div class="mb-4">
+                        <span class="block text-xl font-bold text-gray-900">Game 4 - Championship</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-base font-semibold text-gray-900">October 14, 2024</span>
+                        <span class="text-sm text-gray-500">3:00 PM</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="text-lg font-bold text-black">G3 Winner</div>
+                        <span class="text-gray-500">vs</span>
+                        <div class="text-lg font-bold text-green-400">CAFES</div>
+                    </div>
+                    <div class="flex items-center justify-center mb-4 space-x-8">
+                        <div class="text-lg font-bold text-black">--</div>
+                        <div class="text-lg font-bold text-pink-400">--</div>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-md font-medium text-gray-700">Venue:</span>
+                        <span class="text-md text-gray-600">MESC</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-md font-medium text-gray-700">Category:</span>
+                        <span class="text-md text-gray-600">Men</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-md font-medium text-gray-700">Facilitator:</span>
+                        <span class="text-md text-gray-600">Jane Smith</span>
+                    </div>
+                    <!--Type Section -->
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-md font-medium text-gray-700">Type:</span>
+                        <span class="text-md text-gray-600">Double Elimination</span>
+                    </div>
+    
+                    <div class="mb-4 flex justify-center">
+                        <span class="inline-block px-3 py-1 text-sm font-medium rounded-full bg-gray-100 text-gray-800">
+                            Not started
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="container mx-auto px-4 py-2"></div>
+        <div class="text-3xl font-bold text-black p-2 m-0 text-center">
+            <h2>Lawn Tennis Single</h2>
+        </div>
+
+        <!-- Flex container for cards -->
+        <div class="flex flex-wrap justify-center space-x-1 px-3 mx-3">
+    
+            <!-- Card 1 -->
+            <div class="max-w-xs w-full md:w-1/3 lg:w-1/5 px-4 mb-8">
+                <div class="bg-white border border-gray-200 rounded-lg shadow-md p-4">
+                    <!-- Game Info -->
+                    <div class="mb-4">
+                        <span class="block text-xl font-bold text-gray-900">Game 1 - Round 1</span>
+                    </div>
+    
+                    <!-- Date and Time Section -->
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-base font-semibold text-gray-900">October 12, 2024</span>
+                        <span class="text-sm text-gray-500">2:00 PM</span>
+                    </div>
+    
+                    <!-- Teams and Scores Section -->
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="text-lg font-bold text-yellow-300">CBAA</div>
+                        <span class="text-gray-500">vs</span>
+                        <div class="text-lg font-bold text-blue-700">SMFT</div>
+                    </div>
+                    
+                    
+                    <div class="flex items-center justify-center mb-4 space-x-8">
+                        <div class="text-lg font-bold text-yellow-300">--</div>
+                        <div class="text-lg font-bold text-blue-700">--</div>
+                    </div>
+    
+                    <!-- Venue and Category Section -->
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-md font-medium text-gray-700">Venue:</span>
+                        <span class="text-md text-gray-600">OVAL</span>
+                    </div>
+    
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-md font-medium text-gray-700">Category:</span>
+                        <span class="text-md text-gray-600">Women</span>
+                    </div>
+    
+                    <!-- Facilitator Section -->
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-md font-medium text-gray-700">Facilitator:</span>
+                        <span class="text-md text-gray-600">John Doe</span>
+                    </div>
+
+                    <!--Type Section -->
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-md font-medium text-gray-700">Type:</span>
+                        <span class="text-md text-gray-600">Double Elimination</span>
+                    </div>
+    
+    
+                    <!-- Status Section -->
+                    <div class="mb-4 flex justify-center">
+                        <span class="inline-block px-3 py-1 text-sm font-medium rounded-full bg-orange-100 text-orange-800">
+                            Ongoing
+                        </span>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Card 2 -->
+            <div class="max-w-xs w-full md:w-1/3 lg:w-1/5 px-4 mb-8">
+                <div class="bg-white border border-gray-200 rounded-lg shadow-md p-4">
+                    <div class="mb-4">
+                        <span class="block text-xl font-bold text-gray-900">Game 2 - Round 2</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-base font-semibold text-gray-900">October 14, 2024</span>
+                        <span class="text-sm text-gray-500">3:00 PM</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="text-lg font-bold text-black">G1 Loser</div>
+                        <span class="text-gray-500">vs</span>
+                        <div class="text-lg font-bold text-pink-400">CESS-IDS</div>
+                    </div>
+                    <div class="flex items-center justify-center mb-4 space-x-8">
+                        <div class="text-lg font-bold text-black">--</div>
+                        <div class="text-lg font-bold text-pink-400">--</div>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-md font-medium text-gray-700">Venue:</span>
+                        <span class="text-md text-gray-600">MESC</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-md font-medium text-gray-700">Category:</span>
+                        <span class="text-md text-gray-600">Men</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-md font-medium text-gray-700">Facilitator:</span>
+                        <span class="text-md text-gray-600">Jane Smith</span>
+                    </div>
+
+                    <!--Type Section -->
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-md font-medium text-gray-700">Type:</span>
+                        <span class="text-md text-gray-600">Double Elimination</span>
+                    </div>
+    
+                    <div class="mb-4 flex justify-center">
+                        <span class="inline-block px-3 py-1 text-sm font-medium rounded-full bg-gray-100 text-gray-800">
+                            Not started
+                        </span>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Card 3 -->
+            <div class="max-w-xs w-full md:w-1/3 lg:w-1/5 px-4 mb-8">
+                <div class="bg-white border border-gray-200 rounded-lg shadow-md p-4">
+                    <div class="mb-4">
+                        <span class="block text-xl font-bold text-gray-900">Game 3 - Semifinals</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-base font-semibold text-gray-900">October 14, 2024</span>
+                        <span class="text-sm text-gray-500">3:00 PM</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="text-lg font-bold text-black">G2 Winner</div>
+                        <span class="text-gray-500">vs</span>
+                        <div class="text-lg font-bold text-green-400">CAFES</div>
+                    </div>
+                    <div class="flex items-center justify-center mb-4 space-x-8">
+                        <div class="text-lg font-bold text-black">--</div>
+                        <div class="text-lg font-bold text-pink-400">--</div>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-md font-medium text-gray-700">Venue:</span>
+                        <span class="text-md text-gray-600">MESC</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-md font-medium text-gray-700">Category:</span>
+                        <span class="text-md text-gray-600">Men</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-md font-medium text-gray-700">Facilitator:</span>
+                        <span class="text-md text-gray-600">Jane Smith</span>
+                    </div>
+                    <!--Type Section -->
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-md font-medium text-gray-700">Type:</span>
+                        <span class="text-md text-gray-600">Double Elimination</span>
+                    </div>
+    
+                    <div class="mb-4 flex justify-center">
+                        <span class="inline-block px-3 py-1 text-sm font-medium rounded-full bg-gray-100 text-gray-800">
+                            Not started
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="max-w-xs w-full md:w-1/3 lg:w-1/5 px-4 mb-8">
+                <div class="bg-white border border-gray-200 rounded-lg shadow-md p-4">
+                    <div class="mb-4">
+                        <span class="block text-xl font-bold text-gray-900">Game 4 - Championship</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-base font-semibold text-gray-900">October 14, 2024</span>
+                        <span class="text-sm text-gray-500">3:00 PM</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="text-lg font-bold text-black">G3 Winner</div>
+                        <span class="text-gray-500">vs</span>
+                        <div class="text-lg font-bold text-green-400">CAFES</div>
+                    </div>
+                    <div class="flex items-center justify-center mb-4 space-x-8">
+                        <div class="text-lg font-bold text-black">--</div>
+                        <div class="text-lg font-bold text-pink-400">--</div>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-md font-medium text-gray-700">Venue:</span>
+                        <span class="text-md text-gray-600">MESC</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-md font-medium text-gray-700">Category:</span>
+                        <span class="text-md text-gray-600">Men</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-md font-medium text-gray-700">Facilitator:</span>
+                        <span class="text-md text-gray-600">Jane Smith</span>
+                    </div>
+                    <!--Type Section -->
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-md font-medium text-gray-700">Type:</span>
+                        <span class="text-md text-gray-600">Double Elimination</span>
+                    </div>
+    
+                    <div class="mb-4 flex justify-center">
+                        <span class="inline-block px-3 py-1 text-sm font-medium rounded-full bg-gray-100 text-gray-800">
+                            Not started
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+        <!-- Card 3 (you can replicate for more cards similarly) -->
+        <!-- Additional cards follow the same structure -->
+    </div>
+    
+    </div>
+
+    <footer class="m-auto w-full p-1 bg-white border-t border-gray-200 shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800 dark:border-gray-600">
+        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" class="hover:underline">Supreme Student Council</a>. All Rights Reserved.
+        </span>
+        <ul class="flex flex-wrap items-center text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0 p-0 mt-0">
+            <li>
+                <div class="hover:underline me-4 md:me-6">Email: ssc@msunaawan.edu.ph</a>
+            </li>
+            <li>
+                <div class="hover:underline">Contact: (+639)777-88-6642</div>
+            </li>
+        </ul>
+    </footer>
+    
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+
+
+
+</body>
+</html>
